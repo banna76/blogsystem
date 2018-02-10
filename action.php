@@ -1,14 +1,14 @@
 <?php
+
 include('header.php');
 include('conn.php');
-$output="";
 
+$output="";
 $submitbtn = isset($_POST['submitbtn'])? $_POST['submitbtn'] : null;
 
 $con = new DB_con();
 
-if($submitbtn == "Save")
-{
+if($submitbtn == "Save"){
     $id=$_POST['postuserid'];
     $title=$_POST['postTitle'];
     $body=$_POST['postBody'];
@@ -23,8 +23,7 @@ if($submitbtn == "Save")
     }
 }
 
-if($submitbtn == "Update")
-{
+if($submitbtn == "Update"){
     $id=$_POST['postid'];
     $title=$_POST['postTitle'];
     $body=$_POST['postBody'];
@@ -39,8 +38,7 @@ if($submitbtn == "Update")
     }
 }
 
-if(isset($_GET['submitbtn']) == "delete")
-{
+if(isset($_GET['submitbtn']) == "delete"){
     $id=$_GET['id'];
     $table = 'blogs';
     $result = $con->delete($table, $id);
@@ -51,7 +49,6 @@ if(isset($_GET['submitbtn']) == "delete")
         $output=$result;
     }
 }
-
 
 echo $output;
 include('footer.php');

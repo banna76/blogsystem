@@ -3,15 +3,15 @@ include('header.php');
 include('conn.php');
 
 if(isset($_SESSION['login_user'])) {
-
     $con = new DB_con();
+
     $id = isset($_GET['id']) ? $_GET['id'] : "";
     $title = null;
     $body = null;
     $button = "Save";
     $table = "blogs";
-    if ($id) {
 
+    if ($id) {
         $result = $con->selectById($table,$id);
 
         while ($row = $result->fetch_assoc()) {
@@ -20,7 +20,7 @@ if(isset($_SESSION['login_user'])) {
         }
         $button = "Update";
     }
-    ?>
+?>
 
 
     <form class="form" method="post" action="action.php">
@@ -47,7 +47,7 @@ if(isset($_SESSION['login_user'])) {
     </form>
 
 
-    <?php
+<?php
 } // session if
 else{
     header("location: index.php");

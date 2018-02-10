@@ -7,6 +7,7 @@ $userrole= isset($_SESSION['login_user_role'])? $_SESSION['login_user_role'] : n
 $userid= isset($_SESSION['login_user_id'])? $_SESSION['login_user_id'] : null;
 
 echo "<div class='text-center mb-4'> <h1 class='h3 mb-3 font-weight-normal'>Blog List</h1></div>";
+
 $table = 'blogs';
 $con = new DB_con();
     if($user) {

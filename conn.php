@@ -6,7 +6,6 @@ define('DB_NAME', 'banna');
 
 $conn = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 
-
 class DB_con
 {
 
@@ -51,7 +50,6 @@ class DB_con
   $result = $conn->query($sql);
   return $result;
  }
-
 
  public function selectUser($table,$password,$username)
  {

@@ -2,7 +2,6 @@
 include('header.php');
 include('conn.php');
 
-
 $error=''; // Variable To Store Error Message
 
 if (isset($_POST['submit'])) {
@@ -11,21 +10,23 @@ if (isset($_POST['submit'])) {
     }
     else
     {
-// Define $username and $password
+
+      // Define $username and $password
         $username=$_POST['username'];
         $password=$_POST['password'];
 
-// To protect MySQL injection for Security purpose
+        // To protect MySQL injection for Security purpose
         $username = stripslashes($username);
         $password = stripslashes($password);
 
 
-// SQL query to fetch information of registerd users and finds user match.
+        // SQL query to fetch information of registerd users and finds user match.
         $con = new DB_con();
         $table = 'user';
         $result = $con->selectUser($table,$username,$password);
         $row = $result->fetch_row();
         $row_num = $result->num_rows;
+
        // var_dump($row[4]);
         if ($row_num  > 0) {
             $_SESSION['login_user']=$username; // Initializing Session
@@ -37,8 +38,8 @@ if (isset($_POST['submit'])) {
         }
     }
 }
-
 ?>
+
 <form class="form-signin" action="" method="post">
     <div class="text-center mb-4">
         <h1 class="h3 mb-3 font-weight-normal">User Login</h1>
@@ -55,5 +56,6 @@ if (isset($_POST['submit'])) {
 
     <input name="submit" type="submit" value=" Login ">
 </form>
+
 <?php
 include('footer.php');
