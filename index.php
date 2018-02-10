@@ -10,7 +10,7 @@ $result = $con->selectAll($table);
 if ($result->num_rows > 0) {
 
 
-    while($row = $result->fetch_assoc()) {
+   while($row = $result->fetch_assoc()) {
 
    echo "<div class='jumbotron'>";
    echo "<h1>".$row['title']."</h1>";
