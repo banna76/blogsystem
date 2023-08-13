@@ -9,6 +9,8 @@ A php example project for learn CRUD.
 
 ![Alt text](Screencapture_admin.png "Admin Page")
 
-![Alt text](Screencapture_single.png "Single Blog View")
+
+![Alt text](Screencapture_singleview.png "Single Blog View")
+
 
 ![Alt text](Screencapture_insert.png "Insert Page")
