@@ -4,11 +4,11 @@ A php example project for learn CRUD.
 
 # screenshot
 
-![Alt text](Screencapture_(1).png)
+![Alt text](Screencapture_home.png "Landing Page")
 
 
-![Alt text](Screencapture_(2).png)
+![Alt text](Screencapture_admin.png "Admin Page")
 
-![Alt text](Screencapture_(3).png)
+![Alt text](Screencapture_single.png "Single Blog View")
 
-![Alt text](Screencapture_(4).png)
+![Alt text](Screencapture_insert.png "Insert Page")
